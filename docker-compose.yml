@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: fudo
+      POSTGRES_PASSWORD: fudo
+      POSTGRES_DB: fudo
+    ports:
+      - "5432:5432"
+    volumes:
+      - fudo-postgres:/var/lib/postgresql/data
+
+volumes:
+  fudo-postgres:
